@@ -7,6 +7,8 @@ from .controllers.consumers import ChatConsumer
 urlpatterns = [
     path('chatrooms/', views.ListChatRoom.as_view(), name='list-chatrooms'),
     path('create_chatroom/', views.CreateChatRoom.as_view(), name='create-chatroom'),
+    path('messages/', views.ListMessage.as_view(), name='list-messages'),
+
     path('api/login/', LoginView.as_view(), name='api-login'),
     path('api/logout/', LogoutView.as_view(), name='api-logout'),
     

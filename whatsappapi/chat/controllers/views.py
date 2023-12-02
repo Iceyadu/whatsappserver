@@ -11,11 +11,15 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth import authenticate, login, logout
 
 from .serializers import UserSerializer
-from ..entities.models import ChatRoom
+from ..entities.models import ChatRoom, Message
 from .serializers import ChatRoomSerializer, MessageSerializer
 
 class ListChatRoom(generics.ListAPIView):
     queryset = ChatRoom.objects.all()
+    serializer_class = ChatRoomSerializer
+
+class ListMessage(generics.ListAPIView):
+    queryset = Message.objects.all()
     serializer_class = ChatRoomSerializer
 
 class CreateChatRoom(generics.CreateAPIView):
