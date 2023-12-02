@@ -1,7 +1,7 @@
 from django.urls import path,include, re_path
-from . import views
-from .views import LoginView, LogoutView, FileUploadView
-from .consumers import ChatConsumer
+from .controllers import views
+from .controllers.views import LoginView, LogoutView, FileUploadView
+from .controllers.consumers import ChatConsumer
 
 
 urlpatterns = [

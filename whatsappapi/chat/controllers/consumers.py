@@ -13,7 +13,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         )
         await self.accept()
 
-        # Trigger Celery task
+        # Trigger Celery task to enter user to 
         enter_chatroom.delay(self.user.id, self.room_name)
 
     async def disconnect(self, close_code):
