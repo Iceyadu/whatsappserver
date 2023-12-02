@@ -82,7 +82,7 @@ You will need to have the following installed:
 
 ## API Endpoints
 
-- **Create Chatroom**: POST `/api/create_chatroom`
+- **Create Chatroom**: POST `/api/chatroom/create`
 - **List Chatrooms**: GET `/api/chatrooms`
 - **Enter Chatroom**: POST `/api/chatroom/enter/`
 	   -   room_id: 
